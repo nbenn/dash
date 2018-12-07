@@ -23,7 +23,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <malloc.h>
+#ifndef __APPLE__
+  #include <malloc.h>
+#endif
 
 
 struct dart_lock_struct
